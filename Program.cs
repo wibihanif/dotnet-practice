@@ -529,9 +529,9 @@ String[] cars = { "BMW", "TOYOTA", "HONDA" };
 
 
 // METHODS
-// singHappyBirthday(12, "Wibi");
+// singHappyBirthday(12, "Andri");
 
-// static void singHappyBirthday(int n, String name)
+// static void singHappyBirthday(int n, String name = "Wibi")
 // {
 //     for (int i = 1; i <= n; i++)
 //     {
@@ -680,23 +680,54 @@ static double PlustMethodDouble(params double[] doubleNumbers)
 // Handphone handphone1 = new Handphone();
 // Console.WriteLine(handphone1.brand + " " + handphone1.pulse);
 
-String helloMessage = Message.Hello();
-String waitingMessage = Message.Waiting();
-String byeMessage = Message.Bye();
+// String helloMessage = Message.Hello();
+// String waitingMessage = Message.Waiting();
+// String byeMessage = Message.Bye();
 
-Console.WriteLine(helloMessage);
-Console.WriteLine(waitingMessage);
-Console.WriteLine(byeMessage);
+// Console.WriteLine(helloMessage);
+// Console.WriteLine(waitingMessage);
+// Console.WriteLine(byeMessage);
 
-Human human1 = new Human();
-human1.name = "andri";
-human1.age = 30;
-String human1Eat = human1.Eat();
-String human1Sleep = human1.Sleep();
+// Human human1 = new Human();
+// human1.name = "andri";
+// human1.age = 30;
+// String human1Eat = human1.Eat();
+// String human1Sleep = human1.Sleep();
 
-Console.WriteLine(human1Eat);
-Console.WriteLine(human1Sleep);
+// Console.WriteLine(human1Eat);
+// Console.WriteLine(human1Sleep);
 
+// Plant plant1 = new Plant("Rose", "Red", 40);
+// Plant plant2 = new Plant("Melati", "white", 10);
+
+// String plant1Dying = plant1.Dying();
+// String plant1Count = plant1.CountPlant();
+
+// Console.WriteLine(plant1Dying);
+// Console.WriteLine(plant1Count);
+// Console.WriteLine(Plant.totalPlant);
+
+// Motorbike motorbike = new Motorbike();
+// int motorbikeSpeed = motorbike.speed = 10;
+
+// Console.WriteLine(motorbikeSpeed);
+
+// ARRAY OF OBJECT
+
+Plant plantA = new Plant("Mawar", "Red", 1);
+Plant plantB = new Plant("Melati", "Putih", 2);
+Plant plantC = new Plant("Bangkai", "Pink", 2);
+
+Plant[] garden = { plantA, plantB, plantC };
+
+// i want to parse that just make the array of string
+// use system LINQ
+String[] plantNames = garden.Select((plant) => plant.name).ToArray();
+
+foreach (String plant in plantNames)
+{
+    Console.WriteLine(plant);
+}
 
 
 

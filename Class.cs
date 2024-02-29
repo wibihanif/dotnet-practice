@@ -4,8 +4,18 @@ public class Handphone
     public int pulse = 2500000;
 }
 
+// kalo ga pake constructor jadi objec biasa aja
+public class Vehicle
+{
+    public int speed = 0;
+    public string go()
+    {
+        return "The vehicle start going";
+    }
+}
 
-public class Car
+
+public class Car : Vehicle
 {
     public Car()
     {
@@ -15,6 +25,16 @@ public class Car
 
     public string Brand { get; set; }
     public string Color { get; set; }
+}
+
+public class Motorbike : Vehicle
+{
+    public int wheel = 2;
+}
+
+public class Boat : Vehicle
+{
+    public int wheel = 0;
 }
 
 public class Message
@@ -48,7 +68,7 @@ public class Human
 
     public string Sleep()
     {
-        return $"{name} is eating at the age of {age}";
+        return $"{name} is sleeping at the age of {age}";
     }
 }
 
@@ -56,10 +76,12 @@ public class Animal
 {
     public string Name { get; set; }
     public string Color { get; set; }
+    public static int totalAnimal;
     public Animal(string name, string color)
     {
         Name = name;
         Color = color;
+        totalAnimal++;
     }
 
     public string Eat()
@@ -71,6 +93,35 @@ public class Animal
     {
         return $"that {Name} which has {Color} color is sleeping";
     }
+}
+
+
+// kalo pake constructor bisa define sendiri sendiri
+public class Plant
+{
+    public String name;
+    public String color;
+    public int amount;
+    public static int totalPlant;
+
+    public Plant(String name, String color, int amount)
+    {
+        this.name = name;
+        this.color = color;
+        this.amount = amount;
+        totalPlant++;
+    }
+
+    public String Dying()
+    {
+        return $"{name} that have {color} color is dying";
+    }
+
+    public String CountPlant()
+    {
+        return $"{amount} plants have died during that accident";
+    }
+
 }
 
 

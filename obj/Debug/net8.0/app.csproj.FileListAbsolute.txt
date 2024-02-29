@@ -26,3 +26,4 @@
 /Users/wibihanifwibowo/Documents/code_test/dotnet-practice/obj/Debug/net8.0/app.pdb
 /Users/wibihanifwibowo/Documents/code_test/dotnet-practice/obj/Debug/net8.0/app.genruntimeconfig.cache
 /Users/wibihanifwibowo/Documents/code_test/dotnet-practice/obj/Debug/net8.0/ref/app.dll
+/Users/wibihanifwibowo/Documents/code_test/dotnet-practice/obj/Debug/net8.0/app.sourcelink.json
