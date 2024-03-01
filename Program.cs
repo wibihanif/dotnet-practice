@@ -720,16 +720,109 @@ Plant plantC = new Plant("Bangkai", "Pink", 2);
 
 Plant[] garden = { plantA, plantB, plantC };
 
+Plant copiedPlant = CopyPlant(plantC);
+
 // i want to parse that just make the array of string
 // use system LINQ
-String[] plantNames = garden.Select((plant) => plant.name).ToArray();
+// String[] plantNames = garden.Select((plant) => plant.name).ToArray();
 
-foreach (String plant in plantNames)
+// foreach (String plant in plantNames)
+// {
+//     Console.WriteLine(plant);
+// }
+
+// String newPlantAColor = ChangePlantColor(plantB, "black");
+
+// set object as parameter in a method
+// static string ChangePlantColor(Plant plant, String newColor)
+// {
+//     return plant.color = newColor;
+// }
+
+static Plant CopyPlant(Plant plant)
 {
-    Console.WriteLine(plant);
+    return new Plant(plant.name, plant.color, plant.amount);
+}
+
+Cat cat1 = new Cat();
+Hawk hawk1 = new Hawk();
+Fish fish1 = new Fish();
+
+Console.WriteLine(cat1.Eaten());
+Console.WriteLine(hawk1.Eat());
+Console.WriteLine(fish1.Eat());
+Console.WriteLine(fish1.Eaten());
+
+// LIST
+// is the same as array but the item can be change by time of its uncertainty
+List<string> food = new List<string>();
+
+// to add item to list
+food.Add("burger");
+food.Add("burger");
+food.Add("burger");
+food.Add("burger");
+food.Add("burger");
+
+// to remove item from list
+food.Remove("burger");
+
+// to insert item based on its index
+food.Insert(0, "lemper");
+
+// to count length of list
+Console.WriteLine(food.Count);
+
+// to find which index
+Console.WriteLine(food.IndexOf("lemper"));
+
+// to check if array is contained of something
+Console.WriteLine(food.Contains("lemper"));
+
+
+String[] foodArr = food.ToArray();
+
+foreach (string item in foodArr)
+{
+    Console.WriteLine(item);
+}
+
+List<Player> players = new List<Player>();
+
+players.Add(new Player("Wibi Hanif Wibowo", "Password123#"));
+players.Add(new Player("Wita Hanifa", "Password123#"));
+players.Add(new Player("Ruswidiya Handayani", "Password123#"));
+
+foreach (Player player in players)
+{
+    Console.WriteLine(player.Password);
 }
 
 
+
+Console.WriteLine($"The color is {Color.yellow}");
+
+Console.WriteLine($"Square: {SquareSide.Square3}");
+Console.WriteLine($"Square radius: {Convert.ToInt32(SquareSide.Square3)} ");
+Console.WriteLine($"Area: {CalculateArea((int)SquareSide.Square3)}");
+
+
+static double CalculateArea(int squareSide)
+{
+    return Math.Pow(squareSide, 2);
+}
+
+public enum Color
+{
+    red = 1, yellow = 2, green = 3, blue = 4
+}
+
+public enum SquareSide
+{
+    Square1 = 6,
+    Square2 = 8,
+    Square3 = 10,
+}
 
 
 

@@ -124,5 +124,56 @@ public class Plant
 
 }
 
+interface IPredator
+{
+    string Eat();
+}
+
+interface IPrey
+{
+    string Eaten();
+}
+
+public class Cat : IPrey
+{
+    public string Eaten()
+    {
+        return "cat is eaten by predator";
+    }
+}
+
+public class Hawk : IPredator
+{
+    public string Eat()
+    {
+        return "hawk is eating the cat";
+    }
+}
+public class Fish : IPrey, IPredator
+{
+    public string Eat()
+    {
+        return "fish eat smaller fish";
+    }
+
+    public string Eaten()
+    {
+        return "smaller fish is eaten by bigger fish";
+    }
+}
+
+public class Player
+{
+    public string UserName { get; set; }
+    public string Password { get; set; }
+    public static int totalPlayer;
+    public Player(string userName, string password)
+    {
+        UserName = userName;
+        Password = password;
+        totalPlayer++;
+    }
+}
+
 
 
